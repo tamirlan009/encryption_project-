@@ -2,7 +2,8 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-
+app.config['DEBUG'] = True
+app.config['TESTING'] = True
 @app.route('/')
 def main():
     return render_template('index.html')
